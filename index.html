@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <script src="./script.js"></script>
+        <title>Document</title>
+    </head>
+    <body onload="initialize();">
+        <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+        <div class="content" id="banner">
+                <img src="logo-removebg-preview (5).png" />
+        </div>
+        <hr />
+        <div class="content" id="mainContent">
+            <div class="split left">
+                <div id="addDiv">
+                    <br />
+                    <form onsubmit = "return false" method = "GET">
+                        <p>Please enter the item you want to add and the quanity:</p>
+                        <input id = "Item" type="text" placeholder="e.g: Lettuce">
+                        <span id = "numCounter">
+                            <button id="minus">-</button>
+                            <span id="num">1</span>
+                            <button id="plus">+</button>
+                        </span>
+                        <button type="submit" onclick="addItem();"><b>Add Item</b></button>
+                    </form>
+                    <br />
+                </div>
+                <div id="removeDiv">
+                    <br />
+                    <form onsubmit = "return false" method = "GET">
+                        <p>Please enter the item you want to remove:</p>
+                        <input id = "removeItems" type="text" placeholder="e.g: Spinach">
+                        <button type="submit" onclick="removeItem();">Remove Item</button>
+                    </form>
+                    <br />
+                </div>
+                <div id="moveUpDiv">
+                    <br />
+                    <form onsubmit = "return false" method = "GET">
+                        <p>Please enter the item you want to move up:</p>
+                        <input id = "moveItemUp" type="text" placeholder="e.g: Spinach">
+                        <button type="submit" onclick="moveUp();">Move Up</button>
+                    </form>
+                    <br />
+                </div>
+                <div id="moveDownDiv">
+                    <br />
+                    <form onsubmit = "return false" method = "GET">
+                        <p>Please enter the item you want to move down:</p>
+                        <input id = "moveItemDown" type="text" placeholder="e.g: Spinach">
+                        <button type="submit" onclick="moveDown();">Move Down</button>
+                    </form>
+                    <br />
+                </div>
+            </div>
+            <div class = "split right">
+                <audio preload="auto" autoplay>
+                    <source src= './Wii Shop Channel - Background Music (HD).mp3' type="audio/mp3">
+                </audio>
+                <div id="list">
+                    <table id="listTable">
+                        <tr id = "baseRow">
+                            <td>List Number</td>
+                            <td>Item</td>       
+                            <td>Quantity</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

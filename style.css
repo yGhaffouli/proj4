@@ -1,0 +1,147 @@
+header {
+    background-color:#6caefa;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    height: 200px;
+    top: 0; 
+    position: fixed;
+    size:relative;
+    border: thin solid grey;
+}
+
+#banner {
+    position:fixed;
+    background-color:#6caefa;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    height: 200px;
+    top: 0; 
+    position: fixed;
+    size:relative;
+    border: thin solid grey;
+}
+
+img {
+   /* size: 40%;  */
+    height: auto; 
+    position:relative;
+    top:10px;
+}
+#removeDiv, #addDiv, #moveUpDiv, #moveDownDiv {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*size:absolute;*/
+    top: 202px;
+    border: solid lavender;
+    background-color:lavender;
+    /*border-radius: 20px;*/
+    width:25%;
+}
+#addDiv {
+    position:absolute;
+    width: 50%;
+    display: inline-block;
+}
+#removeDiv {
+    position: absolute;
+    display: block;
+    width:50%;
+    right:0%;
+}
+#moveUpDiv {
+    position:absolute;
+    width: 50%;
+    top:50%;
+    display: block;
+}
+#moveDownDiv {
+    position: absolute;
+    display: block;
+    width:50%;
+    top:50%;
+    right:0%;
+}
+body {
+    /*background-image: linear-gradient(45deg, #6caefa, lavender);*/
+    background-color: lavender;
+}
+#list {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    size:relative;
+    position:absolute;
+    top: 202px;
+    width:45%;
+    border: solid lavender;
+    background-color:lavender;
+    border-radius: 0px;
+}
+#mainContent {
+    position:absolute;
+    size:relative;
+    padding-top:174px;
+}
+
+td {
+    border: solid;
+    width: 50%;
+    text-align: center;
+}
+
+#minus, #plus {
+    background-color: lavender;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor:pointer;
+}
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+  /* Control the left side */
+.left {
+    left: 0;
+}
+  
+/* Control the right side */
+.right {
+    right: -50%;
+    width:100%
+}
+  
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+/* Style the image inside the centered container, if needed */
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#downArrow, #upArrow {
+    width: 50px;
+    position: relative;
+    height: auto;
+    cursor: pointer;
+}
+
+#content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: 1fr 5fr 2.5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:"header header header" "main main sidebar"
+}
